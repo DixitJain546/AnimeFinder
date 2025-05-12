@@ -31,10 +31,10 @@ The Jikan API provides reliable and consistent data for anime series.
 
 Trailer URLs provided by the API are valid YouTube links.
 
-The app targets devices running Android 5.0 (API level 21) and above.
+The app targets devices running Android 13.0 (API level 33) and above.
 
 Known Limitations
-The app does not handle pagination for the anime list; it fetches only the first page of top anime.
+The app does not handle pagination for the anime list. It fetches only the first page of top anime.
 
 Error handling for network failures is basic and could be enhanced for better user experience.
 

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AnimeFinder</string>
+    <string name="popular_anime">Popular Anime</string>
+    <string name="episodes">Episodes : %s</string>
+    <string name="rating">Rating : %s</string>
+    <string name="genre">Genres : %s</string>
+    <string name="invalid_url">Invalid Video URL</string>
 </resources>

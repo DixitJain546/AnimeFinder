@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_anime"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="@dimen/dimen_12dp"
+    android:layout_marginVertical="@dimen/dimen_4dp"
+    android:layout_height="wrap_content"
+    android:background="@color/color_card_background"
+    android:elevation="@dimen/dimen_4dp"
+    app:cardCornerRadius="@dimen/dimen_24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_anime_poster"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_placeholder_anime"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/vw_overlay"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_150dp"
+            app:layout_constraintVertical_bias="1.0"
+            android:background="@drawable/ic_transparent_overlay"
+            app:layout_constraintBottom_toBottomOf="@id/iv_anime_poster"
+            app:layout_constraintEnd_toEndOf="@id/iv_anime_poster"
+            app:layout_constraintStart_toStartOf="@id/iv_anime_poster"
+            app:layout_constraintTop_toTopOf="@id/iv_anime_poster" />
+        
+        <TextView
+            android:id="@+id/tv_anime_title"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_episodes"
+            tools:text="Anime Title"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/dimen_20sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginHorizontal="@dimen/dimen_12dp"
+            android:layout_marginBottom="@dimen/dimen_4dp"/>
+
+        <TextView
+            android:id="@+id/tv_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Episodes : 10"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="@id/vw_overlay"
+            app:layout_constraintEnd_toEndOf="@id/vw_overlay"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:textColor="@color/color_text_secondary"/>
+
+        <TextView
+            android:id="@+id/tv_anime_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rating : 9.3"
+            android:textSize="16sp"
+            android:textColor="@color/teal_200"
+            app:layout_constraintStart_toStartOf="@id/vw_overlay"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            app:layout_constraintBottom_toBottomOf="@id/vw_overlay" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

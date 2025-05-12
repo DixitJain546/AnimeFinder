@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollIndicators="none"
+    android:background="@color/color_primary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dimen_32dp"
+            android:layout_height="@dimen/dimen_32dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:elevation="@dimen/dimen_4dp"
+            android:padding="@dimen/dimen_4dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/vv_trailer"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_300dp"
+            app:autoPlay="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_300dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_anime_title"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vv_trailer"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            tools:text="Anime Title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_24sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginHorizontal="@dimen/dimen_12dp" />
+
+        <TextView
+            android:id="@+id/tv_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Episodes : 10"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:layout_marginTop="4dp"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/tv_anime_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/color_text_secondary"/>
+
+        <TextView
+            android:id="@+id/tv_anime_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rating : 9.3"
+            android:textSize="@dimen/dimen_16sp"
+            android:textColor="@color/teal_200"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_anime_title" />
+
+        <TextView
+            android:id="@+id/tv_anime_genre"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            tools:text="Genres : Action, Adventure"
+            android:textSize="@dimen/dimen_18sp"
+            android:textColor="@color/teal_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_anime_score" />
+
+        <TextView
+            android:id="@+id/tv_anime_summary"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:fontFamily="sans-serif-light"
+            android:textSize="@dimen/dimen_14sp"
+            android:textColor="@color/color_text_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_anime_genre"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex..."/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
